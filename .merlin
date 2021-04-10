@@ -9,4 +9,6 @@ S src
 B lib/bs/src
 S src/bindings
 B lib/bs/src/bindings
+S src/refs
+B lib/bs/src/refs
 ####BSB GENERATED: NO EDIT}

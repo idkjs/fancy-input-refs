@@ -1,14 +1,14 @@
 rescript = 1
 g_finger := /Users/mando/Github/fancy-input-refs/node_modules/@rescript/react/lib/ocaml/install.stamp
 rule astj
-  command = /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsc.exe  -bs-v 8.4.2 -bs-jsx 3 -bs-super-errors -bs-no-version-header -absname -bs-ast -o $out $i
+  command = /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsc.exe  -bs-v 9.0.2 -bs-jsx 3 -bs-super-errors -bs-no-version-header -absname -bs-ast -o $out $i
 o src/App.ast : astj ../../src/App.res
 rule deps
-  command = /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsb_helper.exe -hash f17b2f5b4487bafc164a2d0e50ded971 $in
+  command = /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsb_helper.exe -hash 76cf3919b9e94fa8d42c99923d863abe $in
   restat = 1
 o src/App.d : deps src/App.ast
 rule mij
-  command = /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsc.exe -I src/bindings -I src -I /Users/mando/Github/fancy-input-refs/node_modules/@rescript/react/lib/ocaml -bs-super-errors -bs-no-version-header  -bs-package-name app -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
+  command = /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsc.exe -I src/refs -I src/bindings -I src -I /Users/mando/Github/fancy-input-refs/node_modules/@rescript/react/lib/ocaml -bs-super-errors -bs-no-version-header  -bs-package-name app -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
   dyndep = 1
   restat = 1
 o src/App.cmj src/App.cmi ../../src/App.bs.js : mij src/App.ast
@@ -19,12 +19,24 @@ o src/bindings/ReactDomExperimental.ast : astj ../../src/bindings/ReactDomExperi
 o src/bindings/ReactDomExperimental.d : deps src/bindings/ReactDomExperimental.ast src/bindings/ReactDomExperimental.iast
 o src/bindings/ReactDomExperimental.iast : astj ../../src/bindings/ReactDomExperimental.resi
 rule mi
-  command = /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsc.exe -I src/bindings -I src -I /Users/mando/Github/fancy-input-refs/node_modules/@rescript/react/lib/ocaml -bs-super-errors -bs-no-version-header  -bs-v $g_finger $i
+  command = /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsc.exe -I src/refs -I src/bindings -I src -I /Users/mando/Github/fancy-input-refs/node_modules/@rescript/react/lib/ocaml -bs-super-errors -bs-no-version-header  -bs-v $g_finger $i
   dyndep = 1
   restat = 1
 o src/bindings/ReactDomExperimental.cmi : mi src/bindings/ReactDomExperimental.iast
 rule mj
-  command = /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsc.exe -bs-read-cmi -I src/bindings -I src -I /Users/mando/Github/fancy-input-refs/node_modules/@rescript/react/lib/ocaml -bs-super-errors -bs-no-version-header  -bs-package-name app -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
+  command = /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsc.exe -bs-read-cmi -I src/refs -I src/bindings -I src -I /Users/mando/Github/fancy-input-refs/node_modules/@rescript/react/lib/ocaml -bs-super-errors -bs-no-version-header  -bs-package-name app -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
   dyndep = 1
   restat = 1
 o src/bindings/ReactDomExperimental.cmj ../../src/bindings/ReactDomExperimental.bs.js : mj src/bindings/ReactDomExperimental.ast src/bindings/ReactDomExperimental.cmi
+o src/refs/FancyApp.ast : astj ../../src/refs/FancyApp.res
+o src/refs/FancyApp.d : deps src/refs/FancyApp.ast
+o src/refs/FancyApp.cmj src/refs/FancyApp.cmi ../../src/refs/FancyApp.bs.js : mij src/refs/FancyApp.ast
+o src/refs/NameInput.ast : astj ../../src/refs/NameInput.res
+o src/refs/NameInput.d : deps src/refs/NameInput.ast
+o src/refs/NameInput.cmj src/refs/NameInput.cmi ../../src/refs/NameInput.bs.js : mij src/refs/NameInput.ast
+o src/refs/FancyInput.ast : astj ../../src/refs/FancyInput.res
+o src/refs/FancyInput.d : deps src/refs/FancyInput.ast
+o src/refs/FancyInput.cmj src/refs/FancyInput.cmi ../../src/refs/FancyInput.bs.js : mij src/refs/FancyInput.ast
+o src/refs/NameInputApp.ast : astj ../../src/refs/NameInputApp.res
+o src/refs/NameInputApp.d : deps src/refs/NameInputApp.ast
+o src/refs/NameInputApp.cmj src/refs/NameInputApp.cmi ../../src/refs/NameInputApp.bs.js : mij src/refs/NameInputApp.ast

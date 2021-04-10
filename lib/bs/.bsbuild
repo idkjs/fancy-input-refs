@@ -1,7 +1,11 @@
-3
+7
 App
 Index
+FancyApp
+NameInput
+FancyInput
+NameInputApp
 ReactDomExperimental
-src	src/bindings	
-1
+src	src/refs	src/bindings	
+1
 0

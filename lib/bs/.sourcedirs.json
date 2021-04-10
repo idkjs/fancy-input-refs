@@ -1,1 +1,1 @@
-{ "dirs" : [ "src" , "src/bindings" ] , "pkgs" : [ [ "bs-platform" , "/Users/mando/Github/fancy-input-refs/node_modules/bs-platform" ] , [ "@rescript/react" , "/Users/mando/Github/fancy-input-refs/node_modules/@rescript/react" ] ] , "generated" : [] }
+{ "dirs" : [ "src" , "src/bindings" , "src/refs" ] , "pkgs" : [ [ "@rescript/react" , "/Users/mando/Github/fancy-input-refs/node_modules/@rescript/react" ] ] , "generated" : [] }
