@@ -8,7 +8,7 @@ rule deps
   restat = 1
 o src/App.d : deps src/App.ast
 rule mij
-  command = /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsc.exe -I src/refs -I src/bindings -I src -I /Users/mando/Github/fancy-input-refs/node_modules/@rescript/react/lib/ocaml -bs-super-errors -bs-no-version-header  -bs-package-name app -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
+  command = /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsc.exe -I src/refsjs -I src/refs -I src/bindings -I src -I /Users/mando/Github/fancy-input-refs/node_modules/@rescript/react/lib/ocaml -bs-super-errors -bs-no-version-header  -bs-package-name app -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
   dyndep = 1
   restat = 1
 o src/App.cmj src/App.cmi ../../src/App.bs.js : mij src/App.ast
@@ -19,12 +19,12 @@ o src/bindings/ReactDomExperimental.ast : astj ../../src/bindings/ReactDomExperi
 o src/bindings/ReactDomExperimental.d : deps src/bindings/ReactDomExperimental.ast src/bindings/ReactDomExperimental.iast
 o src/bindings/ReactDomExperimental.iast : astj ../../src/bindings/ReactDomExperimental.resi
 rule mi
-  command = /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsc.exe -I src/refs -I src/bindings -I src -I /Users/mando/Github/fancy-input-refs/node_modules/@rescript/react/lib/ocaml -bs-super-errors -bs-no-version-header  -bs-v $g_finger $i
+  command = /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsc.exe -I src/refsjs -I src/refs -I src/bindings -I src -I /Users/mando/Github/fancy-input-refs/node_modules/@rescript/react/lib/ocaml -bs-super-errors -bs-no-version-header  -bs-v $g_finger $i
   dyndep = 1
   restat = 1
 o src/bindings/ReactDomExperimental.cmi : mi src/bindings/ReactDomExperimental.iast
 rule mj
-  command = /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsc.exe -bs-read-cmi -I src/refs -I src/bindings -I src -I /Users/mando/Github/fancy-input-refs/node_modules/@rescript/react/lib/ocaml -bs-super-errors -bs-no-version-header  -bs-package-name app -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
+  command = /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsc.exe -bs-read-cmi -I src/refsjs -I src/refs -I src/bindings -I src -I /Users/mando/Github/fancy-input-refs/node_modules/@rescript/react/lib/ocaml -bs-super-errors -bs-no-version-header  -bs-package-name app -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
   dyndep = 1
   restat = 1
 o src/bindings/ReactDomExperimental.cmj ../../src/bindings/ReactDomExperimental.bs.js : mj src/bindings/ReactDomExperimental.ast src/bindings/ReactDomExperimental.cmi
