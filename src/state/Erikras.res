@@ -16,7 +16,7 @@ let transition = (state: state, event: event) =>
 
 @react.component
 let make = () => {
-  let (state, dispatch) = React.useReducer(transition, initial)
+  let (state, event) = React.useReducer(transition, initial)
 
   let count = switch state {
   | Idle(value) => value
@@ -25,10 +25,10 @@ let make = () => {
 
   <>
     {React.string("Count:" ++ Belt.Int.toString(count))}
-    <button onClick={_ => dispatch(Decrement)}> {React.string("-")} </button>
-    <button onClick={_ => dispatch(Increment)}> {React.string("+")} </button>
-    <button onClick={_ => dispatch(Reset)}> {React.string("Reset")} </button>
-    <button onClick={_ => dispatch(Pause)}> {React.string("Pause")} </button>
-    <button onClick={_ => dispatch(Unpause)}> {React.string("Unpause")} </button>
+    <button onClick={_ => event(Decrement)}> {React.string("-")} </button>
+    <button onClick={_ => event(Increment)}> {React.string("+")} </button>
+    <button onClick={_ => event(Reset)}> {React.string("Reset")} </button>
+    <button onClick={_ => event(Pause)}> {React.string("Pause")} </button>
+    <button onClick={_ => event(Unpause)}> {React.string("Unpause")} </button>
   </>
 }

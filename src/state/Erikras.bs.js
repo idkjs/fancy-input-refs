@@ -46,26 +46,26 @@ function transition(state, $$event) {
 
 function Erikras(Props) {
   var match = React.useReducer(transition, initial);
-  var dispatch = match[1];
+  var $$event = match[1];
   return React.createElement(React.Fragment, undefined, "Count:" + String(match[0]._0), React.createElement("button", {
                   onClick: (function (param) {
-                      return Curry._1(dispatch, /* Decrement */1);
+                      return Curry._1($$event, /* Decrement */1);
                     })
                 }, "-"), React.createElement("button", {
                   onClick: (function (param) {
-                      return Curry._1(dispatch, /* Increment */0);
+                      return Curry._1($$event, /* Increment */0);
                     })
                 }, "+"), React.createElement("button", {
                   onClick: (function (param) {
-                      return Curry._1(dispatch, /* Reset */2);
+                      return Curry._1($$event, /* Reset */2);
                     })
                 }, "Reset"), React.createElement("button", {
                   onClick: (function (param) {
-                      return Curry._1(dispatch, /* Pause */3);
+                      return Curry._1($$event, /* Pause */3);
                     })
                 }, "Pause"), React.createElement("button", {
                   onClick: (function (param) {
-                      return Curry._1(dispatch, /* Unpause */4);
+                      return Curry._1($$event, /* Unpause */4);
                     })
                 }, "Unpause"));
 }

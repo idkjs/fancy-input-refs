@@ -1,4 +1,4 @@
-9
+10
 App
 Index
 Erikras
@@ -6,8 +6,9 @@ FancyApp
 NameInput
 FancyInput
 NameInputApp
+ErikrasUncurried
 UncurriedReducer
 ReactDomExperimental
 src	src/state	src/refs	src/bindings	
-1
+1
 0
