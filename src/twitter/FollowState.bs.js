@@ -1,5 +1,6 @@
 
 
+import * as React from "react";
 
 function getText(state) {
   if (state !== 1) {
@@ -84,10 +85,23 @@ function machine(state, $$event) {
   }
 }
 
+function reducer(state, $$event) {
+  return machine(state, $$event);
+}
+
+function FollowState(Props) {
+  React.useReducer(reducer, /* NotFollowing */3);
+  return React.createElement(React.Fragment, undefined, "Count:" + String(1));
+}
+
+var make = FollowState;
+
 export {
   getText ,
   getStyle ,
   machine ,
+  reducer ,
+  make ,
   
 }
-/* No side effect */
+/* react Not a pure module */

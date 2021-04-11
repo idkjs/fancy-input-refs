@@ -59,3 +59,17 @@ let machine = (. state:state, event: event) =>
       | MouseOver => state
     }
   }
+let reducer = (state, event) => machine(. state, event)
+
+@react.component
+let make = () => {
+  let (state, event) = React.useReducer(reducer,NotFollowing)
+
+
+
+  <>
+    {React.string("Count:" ++ Belt.Int.toString(1))}
+
+    // <button type_="button" style="background-color: white; color: black; padding: 15px 40px; font-size: 40px; border: 1px solid rgb(102, 102, 102); border-radius: 15px; cursor: pointer;">{React.string("Follow")}</button>
+  </>
+}

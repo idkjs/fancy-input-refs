@@ -1,2 +1,26 @@
-#Start(1618136075623)
-#Done(1618136075901)
+#Start(1618138808964)
+
+  Warning number 26
+  /Users/mando/Github/fancy-input-refs/src/twitter/FollowState.res:66:15-19
+  
+  64 │ @react.component
+  65 │ let make = () => {
+  66 │   let (state, event) = React.useReducer(reducer,NotFollowing)
+  67 │ 
+  68 │ 
+  
+  unused variable event.
+  
+
+  Warning number 26
+  /Users/mando/Github/fancy-input-refs/src/twitter/FollowState.res:66:8-12
+  
+  64 │ @react.component
+  65 │ let make = () => {
+  66 │   let (state, event) = React.useReducer(reducer,NotFollowing)
+  67 │ 
+  68 │ 
+  
+  unused variable state.
+  
+#Done(1618138809017)
