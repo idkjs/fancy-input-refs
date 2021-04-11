@@ -3,7 +3,7 @@ type event = Increment | Decrement | Reset | Pause | Unpause
 
 let initial = Idle(0)
 
-let reducer = (state: state, event: event) =>
+let transition = (state: state, event: event) =>
   switch (state, event) {
   | (Idle(value), Increment) => Idle(value + 1)
   | (Idle(value), Decrement) => Idle(value - 1)
@@ -16,7 +16,7 @@ let reducer = (state: state, event: event) =>
 
 @react.component
 let make = () => {
-  let (state, dispatch) = React.useReducer(reducer, initial)
+  let (state, dispatch) = React.useReducer(transition, initial)
 
   let count = switch state {
   | Idle(value) => value

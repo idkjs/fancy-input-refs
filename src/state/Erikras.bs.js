@@ -8,7 +8,7 @@ var initial = {
   _0: 0
 };
 
-function reducer(state, $$event) {
+function transition(state, $$event) {
   if (state.TAG !== /* Idle */0) {
     if ($$event >= 4) {
       return {
@@ -45,7 +45,7 @@ function reducer(state, $$event) {
 }
 
 function Erikras(Props) {
-  var match = React.useReducer(reducer, initial);
+  var match = React.useReducer(transition, initial);
   var dispatch = match[1];
   return React.createElement(React.Fragment, undefined, "Count:" + String(match[0]._0), React.createElement("button", {
                   onClick: (function (param) {
@@ -74,7 +74,7 @@ var make = Erikras;
 
 export {
   initial ,
-  reducer ,
+  transition ,
   make ,
   
 }
