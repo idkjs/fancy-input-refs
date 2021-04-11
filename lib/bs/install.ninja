@@ -37,4 +37,8 @@ o Erikras.cmi : cp ../bs/src/state/Erikras.cmi
 o Erikras.cmj : cp ../bs/src/state/Erikras.cmj
 o Erikras.cmt : cp ../bs/src/state/Erikras.cmt
 o Erikras.res : cp ../../src/state/Erikras.res
-build install.stamp : touch App.cmi App.cmj Index.cmi Index.cmj ReactDomExperimental.cmi ReactDomExperimental.cmj FancyApp.cmi FancyApp.cmj NameInput.cmi NameInput.cmj FancyInput.cmi FancyInput.cmj NameInputApp.cmi NameInputApp.cmj Erikras.cmi Erikras.cmj 
+o UncurriedReducer.cmi : cp ../bs/src/state/UncurriedReducer.cmi
+o UncurriedReducer.cmj : cp ../bs/src/state/UncurriedReducer.cmj
+o UncurriedReducer.cmt : cp ../bs/src/state/UncurriedReducer.cmt
+o UncurriedReducer.res : cp ../../src/state/UncurriedReducer.res
+build install.stamp : touch App.cmi App.cmj Index.cmi Index.cmj ReactDomExperimental.cmi ReactDomExperimental.cmj FancyApp.cmi FancyApp.cmj NameInput.cmi NameInput.cmj FancyInput.cmi FancyInput.cmj NameInputApp.cmi NameInputApp.cmj Erikras.cmi Erikras.cmj UncurriedReducer.cmi UncurriedReducer.cmj 
