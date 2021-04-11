@@ -1,15 +1,18 @@
 rescript = 1
 g_finger := /Users/mando/Github/fancy-input-refs/node_modules/@rescript/react/lib/ocaml/install.stamp
+g_finger := /Users/mando/Github/fancy-input-refs/node_modules/bs-css/lib/ocaml/install.stamp
+g_finger := /Users/mando/Github/fancy-input-refs/node_modules/bs-css-emotion/lib/ocaml/install.stamp
+g_finger := /Users/mando/Github/fancy-input-refs/node_modules/bs-webapi/lib/ocaml/install.stamp
 cleaner = /Users/mando/Github/fancy-input-refs/node_modules/gentype/gentype.exe
 rule astj
-  command = /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsc.exe  -bs-v 9.0.2 -bs-jsx 3 -bs-super-errors -bs-no-version-header -absname -bs-ast -o $out $i
+  command = /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsc.exe -w -44 -bs-v 9.0.2 -bs-jsx 3 -bs-super-errors -bs-no-version-header -absname -bs-ast -o $out $i
 o src/App.ast : astj ../../src/App.res
 rule deps
-  command = /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsb_helper.exe -hash 3b8d5008dd5fd3a019b519d86d094df0 $in
+  command = /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsb_helper.exe -hash 8b57166728f4aabfd439a285fa31e89f $in
   restat = 1
 o src/App.d : deps src/App.ast
 rule mij
-  command = /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsc.exe -I src/twitter -I src/state -I src/refsjs -I src/shims -I src/refs -I src/bindings -I src -I /Users/mando/Github/fancy-input-refs/node_modules/@rescript/react/lib/ocaml -bs-super-errors -bs-no-version-header  -bs-gentype /Users/mando/Github/fancy-input-refs/node_modules/gentype/gentype.exe -bs-package-name app -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
+  command = /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsc.exe -I src/twitter -I src/state -I src/refsjs -I src/shims -I src/refs -I src/bindings -I src -I /Users/mando/Github/fancy-input-refs/node_modules/@rescript/react/lib/ocaml -I /Users/mando/Github/fancy-input-refs/node_modules/bs-css/lib/ocaml -I /Users/mando/Github/fancy-input-refs/node_modules/bs-css-emotion/lib/ocaml -I /Users/mando/Github/fancy-input-refs/node_modules/bs-webapi/lib/ocaml -bs-super-errors -bs-no-version-header -w -44 -bs-gentype /Users/mando/Github/fancy-input-refs/node_modules/gentype/gentype.exe -bs-package-name app -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
   dyndep = 1
   restat = 1
 o src/App.cmj src/App.cmi ../../src/App.bs.js : mij src/App.ast
@@ -20,12 +23,12 @@ o src/bindings/ReactDomExperimental.ast : astj ../../src/bindings/ReactDomExperi
 o src/bindings/ReactDomExperimental.d : deps src/bindings/ReactDomExperimental.ast src/bindings/ReactDomExperimental.iast
 o src/bindings/ReactDomExperimental.iast : astj ../../src/bindings/ReactDomExperimental.resi
 rule mi
-  command = /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsc.exe -I src/twitter -I src/state -I src/refsjs -I src/shims -I src/refs -I src/bindings -I src -I /Users/mando/Github/fancy-input-refs/node_modules/@rescript/react/lib/ocaml -bs-super-errors -bs-no-version-header  -bs-gentype /Users/mando/Github/fancy-input-refs/node_modules/gentype/gentype.exe -bs-v $g_finger $i
+  command = /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsc.exe -I src/twitter -I src/state -I src/refsjs -I src/shims -I src/refs -I src/bindings -I src -I /Users/mando/Github/fancy-input-refs/node_modules/@rescript/react/lib/ocaml -I /Users/mando/Github/fancy-input-refs/node_modules/bs-css/lib/ocaml -I /Users/mando/Github/fancy-input-refs/node_modules/bs-css-emotion/lib/ocaml -I /Users/mando/Github/fancy-input-refs/node_modules/bs-webapi/lib/ocaml -bs-super-errors -bs-no-version-header -w -44 -bs-gentype /Users/mando/Github/fancy-input-refs/node_modules/gentype/gentype.exe -bs-v $g_finger $i
   dyndep = 1
   restat = 1
 o src/bindings/ReactDomExperimental.cmi : mi src/bindings/ReactDomExperimental.iast
 rule mj
-  command = /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsc.exe -bs-read-cmi -I src/twitter -I src/state -I src/refsjs -I src/shims -I src/refs -I src/bindings -I src -I /Users/mando/Github/fancy-input-refs/node_modules/@rescript/react/lib/ocaml -bs-super-errors -bs-no-version-header  -bs-gentype /Users/mando/Github/fancy-input-refs/node_modules/gentype/gentype.exe -bs-package-name app -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
+  command = /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsc.exe -bs-read-cmi -I src/twitter -I src/state -I src/refsjs -I src/shims -I src/refs -I src/bindings -I src -I /Users/mando/Github/fancy-input-refs/node_modules/@rescript/react/lib/ocaml -I /Users/mando/Github/fancy-input-refs/node_modules/bs-css/lib/ocaml -I /Users/mando/Github/fancy-input-refs/node_modules/bs-css-emotion/lib/ocaml -I /Users/mando/Github/fancy-input-refs/node_modules/bs-webapi/lib/ocaml -bs-super-errors -bs-no-version-header -w -44 -bs-gentype /Users/mando/Github/fancy-input-refs/node_modules/gentype/gentype.exe -bs-package-name app -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
   dyndep = 1
   restat = 1
 o src/bindings/ReactDomExperimental.cmj ../../src/bindings/ReactDomExperimental.bs.js : mj src/bindings/ReactDomExperimental.ast src/bindings/ReactDomExperimental.cmi
@@ -50,6 +53,27 @@ o src/state/ErikrasUncurried.cmj src/state/ErikrasUncurried.cmi ../../src/state/
 o src/state/UncurriedReducer.ast : astj ../../src/state/UncurriedReducer.res
 o src/state/UncurriedReducer.d : deps src/state/UncurriedReducer.ast
 o src/state/UncurriedReducer.cmj src/state/UncurriedReducer.cmi ../../src/state/UncurriedReducer.bs.js : mij src/state/UncurriedReducer.ast
+o src/twitter/Theme.ast : astj ../../src/twitter/Theme.res
+o src/twitter/Theme.d : deps src/twitter/Theme.ast
+o src/twitter/Theme.cmj src/twitter/Theme.cmi ../../src/twitter/Theme.bs.js : mij src/twitter/Theme.ast
+o src/twitter/Button.ast : astj ../../src/twitter/Button.res
+o src/twitter/Button.d : deps src/twitter/Button.ast
+o src/twitter/Button.cmj src/twitter/Button.cmi ../../src/twitter/Button.bs.js : mij src/twitter/Button.ast
+o src/twitter/MouseOut.ast : astj ../../src/twitter/MouseOut.res
+o src/twitter/MouseOut.d : deps src/twitter/MouseOut.ast
+o src/twitter/MouseOut.cmj src/twitter/MouseOut.cmi ../../src/twitter/MouseOut.bs.js : mij src/twitter/MouseOut.ast
+o src/twitter/Settings.ast : astj ../../src/twitter/Settings.res
+o src/twitter/Settings.d : deps src/twitter/Settings.ast
+o src/twitter/Settings.cmj src/twitter/Settings.cmi ../../src/twitter/Settings.bs.js : mij src/twitter/Settings.ast
+o src/twitter/ButtonStyle.ast : astj ../../src/twitter/ButtonStyle.res
+o src/twitter/ButtonStyle.d : deps src/twitter/ButtonStyle.ast
+o src/twitter/ButtonStyle.cmj src/twitter/ButtonStyle.cmi ../../src/twitter/ButtonStyle.bs.js : mij src/twitter/ButtonStyle.ast
 o src/twitter/FollowState.ast : astj ../../src/twitter/FollowState.res
 o src/twitter/FollowState.d : deps src/twitter/FollowState.ast
 o src/twitter/FollowState.cmj src/twitter/FollowState.cmi ../../src/twitter/FollowState.bs.js : mij src/twitter/FollowState.ast
+o src/twitter/ButtonComponent.ast : astj ../../src/twitter/ButtonComponent.res
+o src/twitter/ButtonComponent.d : deps src/twitter/ButtonComponent.ast
+o src/twitter/ButtonComponent.cmj src/twitter/ButtonComponent.cmi ../../src/twitter/ButtonComponent.bs.js : mij src/twitter/ButtonComponent.ast
+o src/twitter/WindowListenerHook.ast : astj ../../src/twitter/WindowListenerHook.res
+o src/twitter/WindowListenerHook.d : deps src/twitter/WindowListenerHook.ast
+o src/twitter/WindowListenerHook.cmj src/twitter/WindowListenerHook.cmi ../../src/twitter/WindowListenerHook.bs.js : mij src/twitter/WindowListenerHook.ast

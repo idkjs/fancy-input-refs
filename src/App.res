@@ -12,5 +12,7 @@ let make = () => {
     <Erikras />
     <div> {React.string("Erikras Uncurried Reducer")} </div>
     <ErikrasUncurried />
+    <div> {React.string("Twitter Follow State")} </div>
+    <FollowState />
   </div>
 }

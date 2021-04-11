@@ -45,8 +45,36 @@ o UncurriedReducer.cmi : cp ../bs/src/state/UncurriedReducer.cmi
 o UncurriedReducer.cmj : cp ../bs/src/state/UncurriedReducer.cmj
 o UncurriedReducer.cmt : cp ../bs/src/state/UncurriedReducer.cmt
 o UncurriedReducer.res : cp ../../src/state/UncurriedReducer.res
+o Theme.cmi : cp ../bs/src/twitter/Theme.cmi
+o Theme.cmj : cp ../bs/src/twitter/Theme.cmj
+o Theme.cmt : cp ../bs/src/twitter/Theme.cmt
+o Theme.res : cp ../../src/twitter/Theme.res
+o Button.cmi : cp ../bs/src/twitter/Button.cmi
+o Button.cmj : cp ../bs/src/twitter/Button.cmj
+o Button.cmt : cp ../bs/src/twitter/Button.cmt
+o Button.res : cp ../../src/twitter/Button.res
+o MouseOut.cmi : cp ../bs/src/twitter/MouseOut.cmi
+o MouseOut.cmj : cp ../bs/src/twitter/MouseOut.cmj
+o MouseOut.cmt : cp ../bs/src/twitter/MouseOut.cmt
+o MouseOut.res : cp ../../src/twitter/MouseOut.res
+o Settings.cmi : cp ../bs/src/twitter/Settings.cmi
+o Settings.cmj : cp ../bs/src/twitter/Settings.cmj
+o Settings.cmt : cp ../bs/src/twitter/Settings.cmt
+o Settings.res : cp ../../src/twitter/Settings.res
+o ButtonStyle.cmi : cp ../bs/src/twitter/ButtonStyle.cmi
+o ButtonStyle.cmj : cp ../bs/src/twitter/ButtonStyle.cmj
+o ButtonStyle.cmt : cp ../bs/src/twitter/ButtonStyle.cmt
+o ButtonStyle.res : cp ../../src/twitter/ButtonStyle.res
 o FollowState.cmi : cp ../bs/src/twitter/FollowState.cmi
 o FollowState.cmj : cp ../bs/src/twitter/FollowState.cmj
 o FollowState.cmt : cp ../bs/src/twitter/FollowState.cmt
 o FollowState.res : cp ../../src/twitter/FollowState.res
-build install.stamp : touch App.cmi App.cmj Index.cmi Index.cmj ReactDomExperimental.cmi ReactDomExperimental.cmj FancyApp.cmi FancyApp.cmj NameInput.cmi NameInput.cmj FancyInput.cmi FancyInput.cmj NameInputApp.cmi NameInputApp.cmj Erikras.cmi Erikras.cmj ErikrasUncurried.cmi ErikrasUncurried.cmj UncurriedReducer.cmi UncurriedReducer.cmj FollowState.cmi FollowState.cmj 
+o ButtonComponent.cmi : cp ../bs/src/twitter/ButtonComponent.cmi
+o ButtonComponent.cmj : cp ../bs/src/twitter/ButtonComponent.cmj
+o ButtonComponent.cmt : cp ../bs/src/twitter/ButtonComponent.cmt
+o ButtonComponent.res : cp ../../src/twitter/ButtonComponent.res
+o WindowListenerHook.cmi : cp ../bs/src/twitter/WindowListenerHook.cmi
+o WindowListenerHook.cmj : cp ../bs/src/twitter/WindowListenerHook.cmj
+o WindowListenerHook.cmt : cp ../bs/src/twitter/WindowListenerHook.cmt
+o WindowListenerHook.res : cp ../../src/twitter/WindowListenerHook.res
+build install.stamp : touch App.cmi App.cmj Index.cmi Index.cmj ReactDomExperimental.cmi ReactDomExperimental.cmj FancyApp.cmi FancyApp.cmj NameInput.cmi NameInput.cmj FancyInput.cmi FancyInput.cmj NameInputApp.cmi NameInputApp.cmj Erikras.cmi Erikras.cmj ErikrasUncurried.cmi ErikrasUncurried.cmj UncurriedReducer.cmi UncurriedReducer.cmj Theme.cmi Theme.cmj Button.cmi Button.cmj MouseOut.cmi MouseOut.cmj Settings.cmi Settings.cmj ButtonStyle.cmi ButtonStyle.cmj FollowState.cmi FollowState.cmj ButtonComponent.cmi ButtonComponent.cmj WindowListenerHook.cmi WindowListenerHook.cmj 

@@ -1,26 +1,39 @@
-#Start(1618138808964)
+#Start(1618158917495)
 
   Warning number 26
-  /Users/mando/Github/fancy-input-refs/src/twitter/FollowState.res:66:15-19
+  /Users/mando/Github/fancy-input-refs/src/twitter/FollowState.res:136:7-17
   
-  64 │ @react.component
-  65 │ let make = () => {
-  66 │   let (state, event) = React.useReducer(reducer,NotFollowing)
-  67 │ 
-  68 │ 
+  134 ┆ let text = () => getText(state)
+  135 ┆ 
+  136 ┆ let mouseOutRef = MouseOut.useMouseOut(_ => {
+  137 ┆   Js.log("MouseOut: ")
+  138 ┆   event(MouseOut)
   
-  unused variable event.
+  unused variable mouseOutRef.
   
 
   Warning number 26
-  /Users/mando/Github/fancy-input-refs/src/twitter/FollowState.res:66:8-12
+  /Users/mando/Github/fancy-input-refs/src/twitter/FollowState.res:152:7-18
   
-  64 │ @react.component
-  65 │ let make = () => {
-  66 │   let (state, event) = React.useReducer(reducer,NotFollowing)
-  67 │ 
-  68 │ 
+  150 ┆   })
+  151 ┆   ->ignore
+  152 ┆ let onMouseEnter = (~evt: eventType) => {
+  153 ┆   event(evt)
+  154 ┆ }
   
-  unused variable state.
+  unused variable onMouseEnter.
   
-#Done(1618138809017)
+
+  Warning number 26
+  /Users/mando/Github/fancy-input-refs/src/twitter/FollowState.res:155:7-18
+  
+  153 ┆   event(evt)
+  154 ┆ }
+  155 ┆ let onMouseLeave = (~evt: eventType) => event(evt)
+  156 ┆ 
+  157 ┆ React.useEffect0(() => Some(() => Document.removeMouseDownEventListen
+        er(possiblyClose, document)))
+  
+  unused variable onMouseLeave.
+  
+#Done(1618158917751)
