@@ -33,4 +33,8 @@ o NameInputApp.cmi : cp ../bs/src/refs/NameInputApp.cmi
 o NameInputApp.cmj : cp ../bs/src/refs/NameInputApp.cmj
 o NameInputApp.cmt : cp ../bs/src/refs/NameInputApp.cmt
 o NameInputApp.res : cp ../../src/refs/NameInputApp.res
-build install.stamp : touch App.cmi App.cmj Index.cmi Index.cmj ReactDomExperimental.cmi ReactDomExperimental.cmj FancyApp.cmi FancyApp.cmj NameInput.cmi NameInput.cmj FancyInput.cmi FancyInput.cmj NameInputApp.cmi NameInputApp.cmj 
+o Erikras.cmi : cp ../bs/src/state/Erikras.cmi
+o Erikras.cmj : cp ../bs/src/state/Erikras.cmj
+o Erikras.cmt : cp ../bs/src/state/Erikras.cmt
+o Erikras.res : cp ../../src/state/Erikras.res
+build install.stamp : touch App.cmi App.cmj Index.cmi Index.cmj ReactDomExperimental.cmi ReactDomExperimental.cmj FancyApp.cmi FancyApp.cmj NameInput.cmi NameInput.cmj FancyInput.cmi FancyInput.cmj NameInputApp.cmi NameInputApp.cmj Erikras.cmi Erikras.cmj 

@@ -1,1 +1,1 @@
-{ "dirs" : [ "src" , "src/bindings" , "src/refs" , "src/refsjs" ] , "pkgs" : [ [ "@rescript/react" , "/Users/mando/Github/fancy-input-refs/node_modules/@rescript/react" ] ] , "generated" : [] }
+{ "dirs" : [ "src" , "src/bindings" , "src/refs" , "src/refsjs" , "src/state" ] , "pkgs" : [ [ "@rescript/react" , "/Users/mando/Github/fancy-input-refs/node_modules/@rescript/react" ] ] , "generated" : [] }

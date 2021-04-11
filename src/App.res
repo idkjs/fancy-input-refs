@@ -4,5 +4,9 @@
 
 @react.component
 let make = () => {
-  <div className="App"> <NameInputApp /> <FancyApp /> </div>
+  <div className="App">
+   <NameInputApp />
+   <FancyApp />
+   <Erikras />
+   </div>
 }
