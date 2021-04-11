@@ -17,11 +17,12 @@ let reducer = (state: state, event: event) =>
 @react.component
 let make = () => {
   let (state, dispatch) = React.useReducer(reducer, initial)
-  Js.log2("STATE", state)
+
   let count = switch state {
   | Idle(value) => value
   | Paused(value) => value
   }
+
   <>
     {React.string("Count:" ++ Belt.Int.toString(count))}
     <button onClick={_ => dispatch(Decrement)}> {React.string("-")} </button>

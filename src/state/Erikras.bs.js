@@ -47,9 +47,7 @@ function reducer(state, $$event) {
 function Erikras(Props) {
   var match = React.useReducer(reducer, initial);
   var dispatch = match[1];
-  var state = match[0];
-  console.log("STATE", state);
-  return React.createElement(React.Fragment, undefined, "Count:" + String(state._0), React.createElement("button", {
+  return React.createElement(React.Fragment, undefined, "Count:" + String(match[0]._0), React.createElement("button", {
                   onClick: (function (param) {
                       return Curry._1(dispatch, /* Decrement */1);
                     })
