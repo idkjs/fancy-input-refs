@@ -45,4 +45,8 @@ o UncurriedReducer.cmi : cp ../bs/src/state/UncurriedReducer.cmi
 o UncurriedReducer.cmj : cp ../bs/src/state/UncurriedReducer.cmj
 o UncurriedReducer.cmt : cp ../bs/src/state/UncurriedReducer.cmt
 o UncurriedReducer.res : cp ../../src/state/UncurriedReducer.res
-build install.stamp : touch App.cmi App.cmj Index.cmi Index.cmj ReactDomExperimental.cmi ReactDomExperimental.cmj FancyApp.cmi FancyApp.cmj NameInput.cmi NameInput.cmj FancyInput.cmi FancyInput.cmj NameInputApp.cmi NameInputApp.cmj Erikras.cmi Erikras.cmj ErikrasUncurried.cmi ErikrasUncurried.cmj UncurriedReducer.cmi UncurriedReducer.cmj 
+o FollowState.cmi : cp ../bs/src/twitter/FollowState.cmi
+o FollowState.cmj : cp ../bs/src/twitter/FollowState.cmj
+o FollowState.cmt : cp ../bs/src/twitter/FollowState.cmt
+o FollowState.res : cp ../../src/twitter/FollowState.res
+build install.stamp : touch App.cmi App.cmj Index.cmi Index.cmj ReactDomExperimental.cmi ReactDomExperimental.cmj FancyApp.cmi FancyApp.cmj NameInput.cmi NameInput.cmj FancyInput.cmi FancyInput.cmj NameInputApp.cmi NameInputApp.cmj Erikras.cmi Erikras.cmj ErikrasUncurried.cmi ErikrasUncurried.cmj UncurriedReducer.cmi UncurriedReducer.cmj FollowState.cmi FollowState.cmj 

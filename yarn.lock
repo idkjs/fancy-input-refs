@@ -436,6 +436,11 @@ gensync@^1.0.0-beta.2:
   resolved "https://registry.yarnpkg.com/gensync/-/gensync-1.0.0-beta.2.tgz#32a6ee76c3d7f52d46b2b1ae5d93fea8580a25e0"
   integrity sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==
 
+gentype@^3.45.0:
+  version "3.45.0"
+  resolved "https://registry.yarnpkg.com/gentype/-/gentype-3.45.0.tgz#091483f40f411909d2e37e357bd6d27145141c37"
+  integrity sha512-TrflZmSXDAvoEVudjMHF8R/zZb6W2idD63/xG+7bodPVGW4T4IEsPj6HUfZz0ia6I5SYNDZa4pR+lvm9Sbh1+Q==
+
 get-intrinsic@^1.0.2, get-intrinsic@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/get-intrinsic/-/get-intrinsic-1.1.1.tgz#15f59f376f855c446963948f0d24cd3637b4abc6"

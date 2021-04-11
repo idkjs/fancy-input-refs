@@ -13,4 +13,6 @@ S src/refs
 B lib/bs/src/refs
 S src/state
 B lib/bs/src/state
+S src/twitter
+B lib/bs/src/twitter
 ####BSB GENERATED: NO EDIT}
