@@ -129,27 +129,9 @@ open Webapi.Dom
 @react.component
 let make = () => {
   let (state, event) = React.useReducer(reducer, NotFollowing)
-  let (inHover, setHover) = React.useState(_ => false)
 
   let text = () => getText(state)
-  let handleOnMouseEventLog = () =>{
-    Js.log("handleOnMouseEvent: ")
-    switch state {
-    | Following => event->Js.log
-    | FollowingHover => event->Js.log
-    | FollowingNeverMouseOut => event->Js.log
-    | NotFollowing => event->Js.log
-    | NotFollowingHover => event->Js.log
-    }}
-  let handleOnMouseEvent = () =>{
-    Js.log("handleOnMouseEvent: ")
-    switch state {
-    | Following => event
-    | FollowingHover => event
-    | FollowingNeverMouseOut => event
-    | NotFollowing => event
-    | NotFollowingHover => event
-    }}
+
   // let mouseOutRef = MouseOut.useMouseOut(_ => {
   //   Js.log("MouseOut: ")
   //   event(MouseOut)
@@ -171,29 +153,66 @@ let make = () => {
   // }
   // let onMouseLeave = (~evt: eventType) => event(evt)
 
-  React.useEffect0(() => Some(() => Document.removeMouseDownEventListener(possiblyClose, document)))
 
+  React.useEffect0(() => Some(() => Document.removeMouseDownEventListener(possiblyClose, document)))
+  // let handleMouseEvent = (e: Dom.mouseEvent) => {
+  //   // let screenX = Webapi.Dom.MouseEvent.screenX(e);
+  //   // let screenY = Webapi.Dom.MouseEvent.screenY(e);
+  //   //   MouseOut.useMouseOut(_ => {
+  //   //   Js.log("MouseOut: ")
+  //   //   event(MouseOut)
+  //   // })
+  //   Js.log2("MouseOut_EVENT: ", e)
+  //   event(MouseOut)
+  // }
+  // React.useEffect0(() => {
+  //   open Webapi.Dom
+  //   /* see: https://github.com/reasonml-community/bs-webapi-incubator/blob/6b2a63ebce3f96159a2d0e9efcb853d1fd43f497/examples/dom_example.re#L96 */
+  //   Webapi.Dom.Document.addMouseMoveEventListener(handleMouseEvent, document)
+  //   Some(() => Webapi.Dom.Document.removeMouseDownEventListener(handleMouseEvent, document))
+  // })
   <>
+
     <div>
-      <button
-        onMouseEnter={_ => {
-          handleOnMouseEventLog() |> ignore
-          setHover(_ => true)
-        }}
-        onMouseLeave={_ => {
-          handleOnMouseEventLog() |> ignore
-          setHover(_ => false)
-        }}
+      {switch state {
+      | Following | FollowingNeverMouseOut =>
+        <button
         // ref={ReactDOM.Ref.domRef(mouseOutRef)}
-        ref={ReactDOM.Ref.domRef(element)}
-        onClick={evt => {
-          Js.log2("ONCLICK_EVENT: ", evt)
-          Js.log2("ONCLICK_STATE: ", state)
-          handleOnMouseEvent()|>ignore
-        }}
-        className={styles(~variant=getButtonStyle(state))}>
-        {React.string(text())}
-      </button>
+          ref={ReactDOM.Ref.domRef(element)}
+          onClick={evt => {
+            Js.log2("ONCLICK_EVENT: ", evt)
+            Js.log2("ONCLICK_STATE: ", state)
+            event(MouseOut)
+          }}
+          className={styles(~variant=getButtonStyle(state))}>
+          {React.string(text())}
+        </button>
+      | NotFollowing | NotFollowingHover =>
+        <button
+        // onMouseEnter
+        //   onMouseLeave
+        // domRef={ReactDOMRe.Ref.domRef(buttonRef)}
+          ref={ReactDOM.Ref.domRef(element)}
+          onClick={evt => {
+            Js.log2("ONCLICK_EVENT: ", evt)
+            Js.log2("ONCLICK_STATE: ", state)
+            event(MouseOut)
+          }}
+          className={styles(~variant=getButtonStyle(state))}>
+          {React.string(text())}
+        </button>
+      | FollowingHover =>
+        <button
+          ref={ReactDOM.Ref.domRef(element)}
+          onClick={evt => {
+            Js.log2("ONCLICK_EVENT: ", evt)
+            Js.log2("ONCLICK_STATE: ", state)
+            event(MouseOut)
+          }}
+          className={Button.getStyle(~variant=getButtonStyle(state))}>
+          {React.string(text())}
+        </button>
+      }}
     </div>
 
     // <button onClick={_ => event}> {React.string(text)} </button>

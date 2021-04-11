@@ -15,8 +15,12 @@ S src
 B lib/bs/src
 S src/bindings
 B lib/bs/src/bindings
+S src/retask
+B lib/bs/src/retask
 S src/refs
 B lib/bs/src/refs
+S src/devto
+B lib/bs/src/devto
 S src/state
 B lib/bs/src/state
 S src/twitter

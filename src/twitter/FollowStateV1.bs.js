@@ -3,6 +3,7 @@
 import * as Css from "bs-css-emotion/src/Css.bs.js";
 import * as Curry from "bs-platform/lib/es6/curry.js";
 import * as React from "react";
+import * as Button from "./Button.bs.js";
 import * as Settings from "./Settings.bs.js";
 import * as Belt_Option from "bs-platform/lib/es6/belt_Option.js";
 import * as Caml_option from "bs-platform/lib/es6/caml_option.js";
@@ -181,19 +182,10 @@ function reducer(state, $$event) {
   return machine(state, $$event);
 }
 
-function FollowState(Props) {
+function FollowStateV1(Props) {
   var match = React.useReducer(reducer, /* NotFollowing */3);
   var $$event = match[1];
   var state = match[0];
-  var match$1 = React.useState(function () {
-        return false;
-      });
-  var setHover = match$1[1];
-  var handleOnMouseEventLog = function (param) {
-    console.log("handleOnMouseEvent: ");
-    console.log($$event);
-    
-  };
   var element = React.useRef(null);
   var possiblyClose = function (e) {
     Belt_Option.map(Caml_option.nullable_to_opt(element.current), (function (domElement) {
@@ -214,31 +206,36 @@ function FollowState(Props) {
                     
                   });
         }), []);
-  return React.createElement(React.Fragment, undefined, React.createElement("div", undefined, React.createElement("button", {
-                      ref: element,
-                      className: styles(getButtonStyle(state)),
-                      onClick: (function (evt) {
-                          console.log("ONCLICK_EVENT: ", evt);
-                          console.log("ONCLICK_STATE: ", state);
-                          console.log("handleOnMouseEvent: ");
-                          
-                        }),
-                      onMouseEnter: (function (param) {
-                          handleOnMouseEventLog(undefined);
-                          return Curry._1(setHover, (function (param) {
-                                        return true;
-                                      }));
-                        }),
-                      onMouseLeave: (function (param) {
-                          handleOnMouseEventLog(undefined);
-                          return Curry._1(setHover, (function (param) {
-                                        return false;
-                                      }));
-                        })
-                    }, getText(state))));
+  return React.createElement(React.Fragment, undefined, React.createElement("div", undefined, state !== 1 ? (
+                    state >= 3 ? React.createElement("button", {
+                            ref: element,
+                            className: styles(getButtonStyle(state)),
+                            onClick: (function (evt) {
+                                console.log("ONCLICK_EVENT: ", evt);
+                                console.log("ONCLICK_STATE: ", state);
+                                return Curry._1($$event, /* MouseOut */2);
+                              })
+                          }, getText(state)) : React.createElement("button", {
+                            ref: element,
+                            className: styles(getButtonStyle(state)),
+                            onClick: (function (evt) {
+                                console.log("ONCLICK_EVENT: ", evt);
+                                console.log("ONCLICK_STATE: ", state);
+                                return Curry._1($$event, /* MouseOut */2);
+                              })
+                          }, getText(state))
+                  ) : React.createElement("button", {
+                        ref: element,
+                        className: Button.getStyle(getButtonStyle(state)),
+                        onClick: (function (evt) {
+                            console.log("ONCLICK_EVENT: ", evt);
+                            console.log("ONCLICK_STATE: ", state);
+                            return Curry._1($$event, /* MouseOut */2);
+                          })
+                      }, getText(state))));
 }
 
-var make = FollowState;
+var make = FollowStateV1;
 
 export {
   getButtonVariant ,

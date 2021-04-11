@@ -14,5 +14,12 @@ let make = () => {
     <ErikrasUncurried />
     <div> {React.string("Twitter Follow State")} </div>
     <FollowState />
+    <div> {React.string("BoxRefs")} </div>
+    <BoxRef title="BoxRef1" />
+    <BoxRef title="BoxRef2" />
+    <div> {React.string("Cat Refs")} </div>
+    <Cats />
+  <RetaskEx />
+  <HoverOverMe/>
   </div>
 }

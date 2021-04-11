@@ -1,39 +1,51 @@
-#Start(1618158917495)
+#Start(1618167159083)
 
-  Warning number 26
-  /Users/mando/Github/fancy-input-refs/src/twitter/FollowState.res:136:7-17
+  Warning number 45
+  /Users/mando/Github/fancy-input-refs/src/retask/ReTask.res:96:9-97:42
   
-  134 ┆ let text = () => getText(state)
-  135 ┆ 
-  136 ┆ let mouseOutRef = MouseOut.useMouseOut(_ => {
-  137 ┆   Js.log("MouseOut: ")
-  138 ┆   event(MouseOut)
+  94 ┆ |> Dict.values
+  95 ┆ |> {
+  96 ┆   open Util
+  97 ┆   Js.Array.forEach(f => f.cancel(.))
+  98 ┆ }
+  99 ┆ cancel.current.subQueue |> Js.Array.forEach(f => f.cancel(.))
   
-  unused variable mouseOutRef.
-  
-
-  Warning number 26
-  /Users/mando/Github/fancy-input-refs/src/twitter/FollowState.res:152:7-18
-  
-  150 ┆   })
-  151 ┆   ->ignore
-  152 ┆ let onMouseEnter = (~evt: eventType) => {
-  153 ┆   event(evt)
-  154 ┆ }
-  
-  unused variable onMouseEnter.
+  this open statement shadows the label cancel (which is later used)
   
 
-  Warning number 26
-  /Users/mando/Github/fancy-input-refs/src/twitter/FollowState.res:155:7-18
+  Warning number 27
+  /Users/mando/Github/fancy-input-refs/src/twitter/FollowState.res:132:8-14
   
-  153 ┆   event(evt)
-  154 ┆ }
-  155 ┆ let onMouseLeave = (~evt: eventType) => event(evt)
-  156 ┆ 
-  157 ┆ React.useEffect0(() => Some(() => Document.removeMouseDownEventListen
-        er(possiblyClose, document)))
+  130 │ let make = () => {
+  131 │   let (state, event) = React.useReducer(reducer, NotFollowing)
+  132 │   let (inHover, setHover) = React.useState(_ => false)
+  133 │ 
+  134 │   let text = () => getText(state)
   
-  unused variable onMouseLeave.
+  unused variable inHover.
   
-#Done(1618158917751)
+
+  Warning number 27
+  /Users/mando/Github/fancy-input-refs/src/retask/RetaskEx.res:4:17-24
+  
+  2 │ @react.component
+  3 │ let make = () => {
+  4 │     let (state, dispatch) = useReducerT({
+  5 │         init: (0, Time.delay(1000, _ => 1)),
+  6 │         update: (state, action) => (state + action, Cmd.none),
+  
+  unused variable dispatch.
+  
+
+  Warning number 27
+  /Users/mando/Github/fancy-input-refs/src/retask/RetaskEx.res:7:52-53
+  
+  5 ┆     init: (0, Time.delay(1000, _ => 1)),
+  6 ┆     update: (state, action) => (state + action, Cmd.none),
+  7 ┆     sub: state => DomEvent.onDocument("click", ev => state)
+  8 ┆ })
+  9 ┆ 
+  
+  unused variable ev.
+  
+#Done(1618167159272)
