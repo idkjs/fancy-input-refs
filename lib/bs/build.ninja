@@ -8,7 +8,7 @@ rule astj
   command = /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsc.exe -w -44 -bs-v 9.0.2 -bs-jsx 3 -bs-super-errors -bs-no-version-header -absname -bs-ast -o $out $i
 o src/App.ast : astj ../../src/App.res
 rule deps
-  command = /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsb_helper.exe -hash eccd4638a3229506577d60fd3f415154 $in
+  command = /Users/mando/Github/fancy-input-refs/node_modules/bs-platform/darwin/bsb_helper.exe -hash c8158430efe53a88730f17e053d884d5 $in
   restat = 1
 o src/App.d : deps src/App.ast
 rule mij
@@ -119,9 +119,15 @@ o src/twitter/FollowState.cmj src/twitter/FollowState.cmi ../../src/twitter/Foll
 o src/twitter/FollowStateV1.ast : astj ../../src/twitter/FollowStateV1.res
 o src/twitter/FollowStateV1.d : deps src/twitter/FollowStateV1.ast
 o src/twitter/FollowStateV1.cmj src/twitter/FollowStateV1.cmi ../../src/twitter/FollowStateV1.bs.js : mij src/twitter/FollowStateV1.ast
+o src/twitter/TwitterButton.ast : astj ../../src/twitter/TwitterButton.res
+o src/twitter/TwitterButton.d : deps src/twitter/TwitterButton.ast
+o src/twitter/TwitterButton.cmj src/twitter/TwitterButton.cmi ../../src/twitter/TwitterButton.bs.js : mij src/twitter/TwitterButton.ast
 o src/twitter/ButtonComponent.ast : astj ../../src/twitter/ButtonComponent.res
 o src/twitter/ButtonComponent.d : deps src/twitter/ButtonComponent.ast
 o src/twitter/ButtonComponent.cmj src/twitter/ButtonComponent.cmi ../../src/twitter/ButtonComponent.bs.js : mij src/twitter/ButtonComponent.ast
 o src/twitter/WindowListenerHook.ast : astj ../../src/twitter/WindowListenerHook.res
 o src/twitter/WindowListenerHook.d : deps src/twitter/WindowListenerHook.ast
 o src/twitter/WindowListenerHook.cmj src/twitter/WindowListenerHook.cmi ../../src/twitter/WindowListenerHook.bs.js : mij src/twitter/WindowListenerHook.ast
+o src/twitter/TwitterButtonVerbose.ast : astj ../../src/twitter/TwitterButtonVerbose.res
+o src/twitter/TwitterButtonVerbose.d : deps src/twitter/TwitterButtonVerbose.ast
+o src/twitter/TwitterButtonVerbose.cmj src/twitter/TwitterButtonVerbose.cmi ../../src/twitter/TwitterButtonVerbose.bs.js : mij src/twitter/TwitterButtonVerbose.ast

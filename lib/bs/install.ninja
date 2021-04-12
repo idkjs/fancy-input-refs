@@ -133,6 +133,10 @@ o FollowStateV1.cmi : cp ../bs/src/twitter/FollowStateV1.cmi
 o FollowStateV1.cmj : cp ../bs/src/twitter/FollowStateV1.cmj
 o FollowStateV1.cmt : cp ../bs/src/twitter/FollowStateV1.cmt
 o FollowStateV1.res : cp ../../src/twitter/FollowStateV1.res
+o TwitterButton.cmi : cp ../bs/src/twitter/TwitterButton.cmi
+o TwitterButton.cmj : cp ../bs/src/twitter/TwitterButton.cmj
+o TwitterButton.cmt : cp ../bs/src/twitter/TwitterButton.cmt
+o TwitterButton.res : cp ../../src/twitter/TwitterButton.res
 o ButtonComponent.cmi : cp ../bs/src/twitter/ButtonComponent.cmi
 o ButtonComponent.cmj : cp ../bs/src/twitter/ButtonComponent.cmj
 o ButtonComponent.cmt : cp ../bs/src/twitter/ButtonComponent.cmt
@@ -141,4 +145,8 @@ o WindowListenerHook.cmi : cp ../bs/src/twitter/WindowListenerHook.cmi
 o WindowListenerHook.cmj : cp ../bs/src/twitter/WindowListenerHook.cmj
 o WindowListenerHook.cmt : cp ../bs/src/twitter/WindowListenerHook.cmt
 o WindowListenerHook.res : cp ../../src/twitter/WindowListenerHook.res
-build install.stamp : touch App.cmi App.cmj Index.cmi Index.cmj ReactDomExperimental.cmi ReactDomExperimental.cmj ws.cmi ws.cmj cmd.cmi cmd.cmj sub.cmi sub.cmj xhr.cmi xhr.cmj task.cmi task.cmj time.cmi time.cmj util.cmi util.cmj ReTask.cmi ReTask.cmj domEvent.cmi domEvent.cmj listener.cmi listener.cmj RetaskEx.cmi RetaskEx.cmj WebSocket.cmi WebSocket.cmj FancyApp.cmi FancyApp.cmj NameInput.cmi NameInput.cmj FancyInput.cmi FancyInput.cmj NameInputApp.cmi NameInputApp.cmj Cats.cmi Cats.cmj BoxRef.cmi BoxRef.cmj HoverOverMe.cmi HoverOverMe.cmj Erikras.cmi Erikras.cmj ErikrasUncurried.cmi ErikrasUncurried.cmj UncurriedReducer.cmi UncurriedReducer.cmj Theme.cmi Theme.cmj Button.cmi Button.cmj MouseOut.cmi MouseOut.cmj Settings.cmi Settings.cmj ButtonStyle.cmi ButtonStyle.cmj FollowState.cmi FollowState.cmj FollowStateV1.cmi FollowStateV1.cmj ButtonComponent.cmi ButtonComponent.cmj WindowListenerHook.cmi WindowListenerHook.cmj 
+o TwitterButtonVerbose.cmi : cp ../bs/src/twitter/TwitterButtonVerbose.cmi
+o TwitterButtonVerbose.cmj : cp ../bs/src/twitter/TwitterButtonVerbose.cmj
+o TwitterButtonVerbose.cmt : cp ../bs/src/twitter/TwitterButtonVerbose.cmt
+o TwitterButtonVerbose.res : cp ../../src/twitter/TwitterButtonVerbose.res
+build install.stamp : touch App.cmi App.cmj Index.cmi Index.cmj ReactDomExperimental.cmi ReactDomExperimental.cmj ws.cmi ws.cmj cmd.cmi cmd.cmj sub.cmi sub.cmj xhr.cmi xhr.cmj task.cmi task.cmj time.cmi time.cmj util.cmi util.cmj ReTask.cmi ReTask.cmj domEvent.cmi domEvent.cmj listener.cmi listener.cmj RetaskEx.cmi RetaskEx.cmj WebSocket.cmi WebSocket.cmj FancyApp.cmi FancyApp.cmj NameInput.cmi NameInput.cmj FancyInput.cmi FancyInput.cmj NameInputApp.cmi NameInputApp.cmj Cats.cmi Cats.cmj BoxRef.cmi BoxRef.cmj HoverOverMe.cmi HoverOverMe.cmj Erikras.cmi Erikras.cmj ErikrasUncurried.cmi ErikrasUncurried.cmj UncurriedReducer.cmi UncurriedReducer.cmj Theme.cmi Theme.cmj Button.cmi Button.cmj MouseOut.cmi MouseOut.cmj Settings.cmi Settings.cmj ButtonStyle.cmi ButtonStyle.cmj FollowState.cmi FollowState.cmj FollowStateV1.cmi FollowStateV1.cmj TwitterButton.cmi TwitterButton.cmj ButtonComponent.cmi ButtonComponent.cmj WindowListenerHook.cmi WindowListenerHook.cmj TwitterButtonVerbose.cmi TwitterButtonVerbose.cmj 
